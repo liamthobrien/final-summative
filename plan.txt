@@ -1,0 +1,115 @@
+Week 1 – Setup & Data Cleaning
+
+Goals:
+
+Set up GitHub repo and virtual environment
+
+Load and inspect dataset
+
+Clean and preprocess data
+
+Tasks & Responsibilities:
+
+Person A:
+
+Verify dataset, standardize country names, handle missing data
+
+Generate lagged features (year t → t+1)
+
+Create processed_wheat_yield.csv
+
+Person B:
+
+Explore dataset: summary statistics, outliers, trends
+
+Start plotting initial yield trends per country
+
+Everyone:
+
+Meet to agree on project structure and file naming
+
+Ensure everyone can pull/push to repo
+
+Deliverables by end of Week 1:
+
+data/raw_wheat_yield.csv & processed_wheat_yield.csv
+
+Notebook: 01_data_cleaning.ipynb
+
+Initial GitHub commit
+
+
+Week 2 – Analysis & Modeling
+
+Goals:
+
+Explore correlations and relationships between countries
+
+Build predictive models
+
+Tasks & Responsibilities:
+
+Person B:
+
+Correlation matrix between countries
+
+Heatmaps and visualizations for trends
+
+Lagged correlation analysis (effect of major producers on other countries next year)
+
+Person C:
+
+Build predictive models: linear regression, multiple regression
+
+Evaluate model performance (cross-validation, R², RMSE)
+
+Identify most influential major producer countries
+
+Person A:
+
+Support modeling with additional preprocessing if needed
+
+Check dataset consistency
+
+Person D:
+
+Document analysis steps in notebook
+
+Ensure plots are labeled and interpretable
+
+Deliverables by end of Week 2:
+
+Notebook: 02_exploratory_analysis.ipynb and 03_modeling.ipynb
+
+Visualizations and correlation analysis
+
+Preliminary conclusions for discussion
+
+
+Week 3 – Interactive App & Final Submission
+
+Goals:
+
+Build interactive app for visualization
+
+Finalize README, requirements, and submission package
+
+QA & final testing
+
+Tasks & Responsibilities:
+
+Person D:
+
+Build PyShiny / Streamlit app
+
+Allow user to select countries and see yield trends/predictions
+
+Integrate visualizations from Week 2
+
+Everyone:
+
+Test notebooks and app for reproducibility
+
+Review narrative explanations in notebooks
+
+Refine conclusions, limitations, and future work section in README
