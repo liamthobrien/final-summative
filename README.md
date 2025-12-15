@@ -32,7 +32,7 @@ However, we acknowledge that the dataset contains many outliers, and no statisti
 
 **Statistical Analysis**
 
-How have wheat yields changed across countries from 1961 to 2023 and which countries have the highest yields and the fastest improvements? 
+<u>How have wheat yields changed across countries from 1961 to 2023 and which countries have the highest yields and the fastest improvements?</u>
 
 Initial statistical analysis found that global yields had increased year-on-year across all continents. Europe consistently had the highest yields by a significant margin, followed by Asia; the remaining continents fluctuated over the defined period but generally had similar yields. This was further demonstrated by calculating mean yields per country over the period, with the top 6 countries by yield per hectare from Europe and the bottom 10 from lower-income countries, primarily in Africa and South America.
 
@@ -94,6 +94,7 @@ Lobell, D. B., & Burke, M. B. (2010). On the use of statistical models to predic
 Ray, D. K., Gerber, J. S., MacDonald, G. K., & West, P. C. (2015). Climate variation explains a third of global crop yield variability. Nature Communications, 6, Article 5989. https://doi.org/10.1038/ncomms6989 
 
 Ray, D. K., Mueller, N. D., West, P. C., & Foley, J. A. (2012). Recent patterns of crop yield growth and stagnation. Nature Communications, 3, Article 1293. 
+
 
 
 
