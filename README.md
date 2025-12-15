@@ -1,4 +1,4 @@
-Authors - Digby Pratt, Ella Cockman, Liam O'Brien, Mason Murray
+_Authors - Digby Pratt, Ella Cockman, Liam O'Brien, Mason Murray_
 
 Question: Do wheat yield trends in major producing countries (e.g China, India, Russia, USA, France) predict yields in net-importing countries (e.g Egypt, Algeria, Indonesia, Brazil, Japan)?
 
@@ -32,7 +32,7 @@ However, we acknowledge that the dataset contains many outliers, and no statisti
 
 **Statistical Analysis**
 
-<u>How have wheat yields changed across countries from 1961 to 2023 and which countries have the highest yields and the fastest improvements?</u>
+_How have wheat yields changed across countries from 1961 to 2023 and which countries have the highest yields and the fastest improvements?_
 
 Initial statistical analysis found that global yields had increased year-on-year across all continents. Europe consistently had the highest yields by a significant margin, followed by Asia; the remaining continents fluctuated over the defined period but generally had similar yields. This was further demonstrated by calculating mean yields per country over the period, with the top 6 countries by yield per hectare from Europe and the bottom 10 from lower-income countries, primarily in Africa and South America.
 
@@ -44,7 +44,7 @@ We then computed the volatility for each country by measuring the degree of vari
 
 Initially, those with high volatility were first-world, economically developed countries. Still, when proportionalising this to the countries' yields, those with the highest volatility were typically associated with political instability and/or rapid economic change, whilst those with the lowest volatility were countries with consistently low yields and/or that are politically stable.
 
-Can we group countries into clusters with similar yield dynamics?
+_Can we group countries into clusters with similar yield dynamics?_
 
 We then examined how the yields of different countries correlated. We found a high degree of correlation across the board, with some outliers exhibiting notably negative correlations relative to the rest of the dataset. To do this, we determined the average yield of each country across the whole time period, the trend of the country over time, and the volatility, as mentioned earlier. This was followed by standardising these features and using k-means clustering amongst different groups of countries.
 
@@ -63,9 +63,9 @@ Cluster 3:
 Very high yields, maintain stable performance relative to their mean (lowest CV), and show strong positive long-term trends.
 Global agricultural leaders, likely including countries with: Advanced crop breeding, advanced farming technology, controlled irrigation and consistent and stable agricultural policy
 
-Given a country’s past yields and the yields of “similar” countries, can we predict that country’s yields better than simple baselines?
+_Given a country’s past yields and the yields of “similar” countries, can we predict that country’s yields better than simple baselines?_
 
-To do this, we compared several models. The first of which was the 'naive baseline' in which we assumed the yield was the same as the year before, 'own history linear regression', in which we predicyed yields based upon the countries past yields, and 'cluster augmented regression' in which we predicted a yield using the history of both the country and the fformentioned cluster it is a part of.
+To do this, we compared several models. The first of which was the 'naive baseline' in which we assumed the yield was the same as the year before, 'own history linear regression', in which we predicyed yields based upon the countries past yields, and 'cluster augmented regression' in which we predicted a yield using the history of both the country and the afformentioned cluster it is a part of.
 
 We first visualised the trajectory of each cluster. Cluster 0 increased at a steady rate throughout the whole time period, cluster 1 increased more rapidly towards the latter half of the time period, cluster 2 was the most stagnant throughout the time period, whilst cluster 3 increased more quickly at the start of the time period, and in a more steady manner towards the end. 
 
@@ -94,6 +94,7 @@ Lobell, D. B., & Burke, M. B. (2010). On the use of statistical models to predic
 Ray, D. K., Gerber, J. S., MacDonald, G. K., & West, P. C. (2015). Climate variation explains a third of global crop yield variability. Nature Communications, 6, Article 5989. https://doi.org/10.1038/ncomms6989 
 
 Ray, D. K., Mueller, N. D., West, P. C., & Foley, J. A. (2012). Recent patterns of crop yield growth and stagnation. Nature Communications, 3, Article 1293. 
+
 
 
 
