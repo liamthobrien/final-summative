@@ -10,7 +10,31 @@ In our research, we apply correlation and regression analysis to 1961-1923 wheat
 Methodology
 
 Data Cleaning
+
 We first filtered the dataset to remove any unnecessary data. This included any rows that contained crops that were not wheat, any rows that contained details that were not the yield, and columns that repeated information. We also chose to filter the dataset to remove any locations that did not contain 80% of the relevant data on wheat yields. We chose this figure as wheat yields are largely quite smooth, which meant that estimating the other 20% was viable. We felt that if a country had less than 80% of data available, it was not viable to keep it in the study. Many countries had some missing values, so it was not viable to remove any which did not have complete data.
 To do these estimations we used 'linear interpolation' - a way to estimate a missing value, that exists between two known values. This methodology is suitable here as we can reasonably assume that the way in which wheat yields change year by year is linear, particularly when we have at least 80% of the data for each country/region. Lobell & Burke (2010) acknowledges the viability, and common usage of methodologies such as this, but does also present some limitations, describing statistical models as a 'uselful imperfect tool'. Limitations here are that the missing values may have occured during outlier events, such as sudden changes in climate, political or economic conditions.
 However, we have acknowledged that the dataset does contain many outliers, and no statistical model can account for them Therefore, we are confident that this is an appropriatre methodology to apply here. Interestingly, the most affected countries here do not appear to be randomly distributed, with countries such as Botswana, Qatar and Sudan all being politically unstable, relatively small states.
 
+Statistical Analysis
+
+How have wheat yields changed across countries from 1961–2023?
+
+Initial statistical analysis found that global yields had increased year on year, and in all individual continents. Europe always had the highest yields by a significant distance, followed by Asia, with the remaining continents intrchanging over the defined time period, but largely having similar yields. This was further represented through calculating the mean yields per country,across the time period, with the top 6 countries with the highest yield per hectare being from the continent of Europe, and the bottom 10 being lower income countires, largely from the continents of Africa and South America.
+When looking at the countries with the largest percentage increase in wheat yield over this time period, we found that there is an alignment with the rate of economic development and the rate of wheat yield increase per hectare, with countries such as China and South Africa being on there. However this was not strictly the case, with countries such as Mauritania and Zambia also being on the top 15.
+We also looked at the distribution of wheat yields over the time period, finding that most yields globally were between 1000 and 3000 hg/ha, and used a heatmap to see how the yields had changed by country. This visualised which countries had similar and different yields, and those that had changed rapidly, as well as allowing us to spot any outliers. It did become clear that in many countries, yields had been fairly stable.
+We then computed the volatility of each country, through measuring the degree of variation over the time period as a proxy representation. Initially, those with a high degree of volatility were countries who were first-world and economically developed, but when proportionalising this to the yields of the countries, those with the highest volatility were ones that would usually be associated with political instability and/or rapid economic change, whilst those with the lowest volatility were the countries with consistently low yields and/or are politically stable.
+
+Can we group countries into clusters with similar yield dynamics?
+
+We then looked into how the yields of different countries correlated with one another. We found that there was a high degree of correlation across the board, with some outliers having notably negative correlations with the rest of the dataset. To do this, we determined the average yield of each country across the full time period, the trend of the country over-time, and the afformentioned volatility. This was followed by standardising these features, and using k-means clustering amongst different groups of countries.
+This led to four different clusters forming. These are as follows-
+Cluster 0:
+Moderate wheat yields but experience noticeable year-to-year variability. Long-term improvement is positive but modest, suggesting slow technological adoption or inconsistent environmental conditions. May face climate instability, varying rainfall, or dependency on fluctuating input use.
+Cluster 1:
+High but extremely volatile yields. Highest relative variability (CV > 0.5), meaning yields swing widely from year to year. Strongest long-term trend, indicating rapid improvements but from a fluctuating base. Could reflect policy driven yield boosts. Climate sensitive regions that occaisionally achieve high yields.
+Cluster 2:
+Consistently low yields but also relatively stable production. Long-term improvement is very slow, indicating limited technological progress or persistent structural constraints. Economies with limited agricultural investment. Countries relying on traditional farming systems. Regions with climatic or soil constraints
+Cluster 3:
+Very high yields, maintain stable performance relative to their mean (lowest CV), and show strong positive long-term trends.
+Global agricultural leaders, likely including countries with: Advanced crop breeding, advanced farming techonlogy, controlled irrigation and consistent and stable agricultural policy
+WILL FINISH  TMMR
