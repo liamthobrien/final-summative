@@ -1,12 +1,12 @@
-_Authors - Digby Pratt, Ella Cockman, Liam O'Brien, Mason Murray_
+Question: How have global wheat yields evolved across countries since 1961, and can countries be grouped into clusters with similar yield dynamics?
 
-Question: Do wheat yield trends in major producing countries (e.g China, India, Russia, USA, France) predict yields in net-importing countries (e.g Egypt, Algeria, Indonesia, Brazil, Japan)?
+Furthermore, does incorporating information from countries with similar yield patterns improve wheat-yield predictions compared with models based solely on a country's historical data?
 
 **Subquestions**
 
 How have wheat yields changed across countries from 1961 to 2023?
 
-Which countries have the highest yields and the fastest improvements? 
+Which countries have the highest yields and the fastest rate of improvement? 
 
 Can we group countries into clusters with similar yield dynamics?
 
@@ -18,23 +18,23 @@ Global wheat yield data show both strong spatial and temporal patterns. Ray et a
 
 Conforti (2004) demonstrated that international process changes can influence and be transmitted to domestic markets. Whilst Evenson and Gollin (2003) showed that agricultural technologies diffused globally through research networks. Moreover, these studies suggest that correlations, if present, could reflect either market price effects or patterns of technology transfer. 
 
-Lobell and Burke (2010) endorse regression models for yield prediction but warn of omitted-variable bias and non-stationarity. Our data suggest that this may be influenced by geopolitics, changes in climate conditions, and international relations. We filtered the dataset to include only 164 countries with data completeness of 80% or higher to exclude outliers, as this was not the focus of the data. Ray et al. (2015) found that climate explains one-third of global yield variability. Since our dataset lacks climate controls, we acknowledge this as a key limitation when interpreting correlations.  
+Lobell and Burke (2010) endorse regression models for yield prediction but warn of omitted-variable bias and non-stationarity. Our data suggest that this may be influenced by geopolitics, climate change, and international relations. We filtered the dataset to include only 164 countries with data completeness of 80% or higher to exclude outliers, as this was not the focus of the data. Ray et al. (2015) found that climate explains one-third of global yield variability. Since our dataset lacks climate controls, we acknowledge this as a key limitation when interpreting correlations.  
 
 In our research, we apply correlation and regression analysis to 1961-1923 wheat yields to test producer-importer relationships, whilst also recognising that observed patterns may reflect global trends rather than direct influence.
 
 **Data Cleaning**
 
-We first filtered the dataset to remove any unnecessary data. This included any rows that contained crops that were not wheat, any rows that contained details that were not the yield, and columns that repeated information. We also filtered the dataset to exclude locations with less than 80% of the relevant wheat-yield data. We chose this figure because wheat yields are relatively smooth, which made estimating the remaining 20% feasible. If a country had less than 80% of data available, it was not viable to keep it in the study. Many countries had missing values, so it was not feasible to remove any that lacked complete data.
+We first filtered the dataset to remove any unnecessary data. This included any rows that contained crops that were not wheat, any rows that contained details that were not the yield, and columns that repeated information. We also filtered the dataset to exclude locations with less than 80% of the relevant wheat-yield data. We chose this figure because wheat yields are relatively smooth, thereby making it feasible to estimate the remaining 20%. If a country had less than 80% of data available, it was not viable to keep it in the study. Many countries had missing values, so it was not feasible to remove any that lacked complete data.
 
-To do these estimations, we used 'linear interpolation' - a way to estimate a missing value that exists between two known values. This methodology is suitable here because we can reasonably assume that year-to-year changes in wheat yields are linear, particularly when we have at least 80% of the data for each country/region. Lobell & Burke (2010) acknowledge the viability and common use of methodologies such as this, but also note limitations, characterising statistical models as a 'useful imperfect tool'. A limitation is that the missing values may have been due to outlier events, such as sudden changes in climate, political, or economic conditions. This methodology is common practice in agricultural datasets (Rey et al, 2012).
+To do these estimations, we used 'linear interpolation' - a way to estimate a missing value that exists between two known values. This methodology is suitable here because we can reasonably assume that year-to-year changes in wheat yields are linear, particularly when we have at least 80% of the data for each country/region. Lobell & Burke (2010) acknowledge the viability and everyday use of methodologies such as this, but also note limitations, characterising statistical models as a 'useful imperfect tool'. A limitation is that the missing values may have been due to outlier events, such as sudden changes in climate, political, or economic conditions. This methodology is common practice in agricultural datasets (Rey et al, 2012).
 
-However, we acknowledge that the dataset contains many outliers, and no statistical model can account for them. Therefore, we are confident that this methodology is appropriate for this context. Interestingly, the most affected countries here do not appear to be randomly distributed, with countries such as Botswana, Qatar, and Sudan being politically unstable and relatively small.
+However, we acknowledge that the dataset contains many outliers, and no statistical model can account for them. Therefore, we are confident that this methodology is appropriate for this context. Interestingly, the most affected countries here are not randomly distributed; countries such as Botswana, Qatar, and Sudan are politically unstable and relatively small.
 
 **Statistical Analysis**
 
-_How have wheat yields changed across countries from 1961 to 2023 and which countries have the highest yields and the fastest improvements?_
+_How have wheat yields changed across countries from 1961 to 2023, and which countries have the highest yields and the fastest improvements?_
 
-Initial statistical analysis found that global yields had increased year-on-year across all continents. Europe consistently had the highest yields by a significant margin, followed by Asia; the remaining continents fluctuated over the defined period but generally had similar yields. This was further demonstrated by calculating mean yields per country over the period, with the top 6 countries by yield per hectare from Europe and the bottom 10 from lower-income countries, primarily in Africa and South America.
+Initial statistical analysis found that global yields had increased year-on-year across all continents. Europe consistently had the highest yields by a significant margin, followed by Asia; the remaining continents fluctuated over the defined period but generally had yields similar to those of Asia. This was further demonstrated by calculating mean yields per country over the period, with the top 6 countries by yield per hectare from Europe and the bottom 10 from lower-income countries, primarily in Africa and South America.
 
 When examining countries with the most significant percentage increases in wheat yield over this period, we found an association between economic development and per-hectare wheat-yield growth, with countries such as China and South Africa among the top performers. However, this was not strictly the case, as countries such as Mauritania and Zambia were also among the top 15.
 
@@ -42,11 +42,13 @@ We also looked at the distribution of wheat yields over the time period, finding
 
 We then computed the volatility for each country by measuring the degree of variation over the time period as a proxy. 
 
-Initially, those with high volatility were first-world, economically developed countries. Still, when proportionalising this to the countries' yields, those with the highest volatility were typically associated with political instability and/or rapid economic change, whilst those with the lowest volatility were countries with consistently low yields and/or that are politically stable.
+Initially, those with high volatility were first-world, economically developed countries. Still, when proportionalising this to countries' yields, those with the highest volatility were typically associated with political instability and/or rapid economic change, whilst those with the lowest volatility were countries with consistently low yields and/or political stability.
 
 _Can we group countries into clusters with similar yield dynamics?_
 
-We then examined how the yields of different countries correlated. We found a high degree of correlation across the board, with some outliers exhibiting notably negative correlations relative to the rest of the dataset. To do this, we determined the average yield of each country across the whole time period, the trend of the country over time, and the volatility, as mentioned earlier. This was followed by standardising these features and using k-means clustering amongst different groups of countries.
+We then examined how the yields of different countries correlated. We found a high degree of correlation across the board, with some outliers exhibiting notably negative correlations relative to the rest of the dataset. To do this, we calculated the average yield for each country over the entire period, the trend over time, and the volatility, as mentioned earlier. This was followed by standardising these features and using k-means clustering amongst different groups of countries.
+
+Countries are clustered based on their wheat-yield levels, growth trends, and volatility to identify groups with similar yield dynamics. These clusters are used to summarise shared structural, technological and environmental characteristics. Cluster-level information is then incorporated into predictive models to test whether cross-country similarities improve the yield forecast.
 
 This led to four different clusters forming. These are as follows-
 
@@ -69,7 +71,7 @@ To do this, we compared several models. The first of which was the 'naive baseli
 
 We first visualised the trajectory of each cluster. Cluster 0 increased at a steady rate throughout the whole time period, cluster 1 increased more rapidly towards the latter half of the time period, cluster 2 was the most stagnant throughout the time period, whilst cluster 3 increased more quickly at the start of the time period, and in a more steady manner towards the end. 
 
-When modelling the data, the data were reshaped, with columns detailing the 'Area' (country), 'Yield', 'Year', and 'Cluster'. We then tested this model on Mainland China, finding that the naive model tends to lag and fails to capture longer-term trends. The own-history regression improves performance by capturing a smooth temporal trend, and the cluster-augmented model further reduces prediction error, particularly in years when the country’s yields align with those of its cluster peers. This suggests that using information from similar countries can modestly improve yield forecasts relative to relying on a country’s own history alone. This aligns with the findings presented by Baldos and Hertel (2024).
+When modelling the data, the data were reshaped to include columns for 'Area' (country), 'Yield', 'Year', and 'Cluster'. We then tested this model on Mainland China, finding that the naive model tends to lag and fails to capture longer-term trends. The own-history regression improves performance by capturing a smooth temporal trend, and the cluster-augmented model further reduces prediction error, particularly in years when the country’s yields align with those of its cluster peers. This suggests that using information from similar countries can modestly improve yield forecasts relative to relying on a country’s own history alone. This aligns with the findings presented by Baldos and Hertel (2024).
 
 **Conclusion and Limitations**
 
@@ -94,6 +96,7 @@ Lobell, D. B., & Burke, M. B. (2010). On the use of statistical models to predic
 Ray, D. K., Gerber, J. S., MacDonald, G. K., & West, P. C. (2015). Climate variation explains a third of global crop yield variability. Nature Communications, 6, Article 5989. https://doi.org/10.1038/ncomms6989 
 
 Ray, D. K., Mueller, N. D., West, P. C., & Foley, J. A. (2012). Recent patterns of crop yield growth and stagnation. Nature Communications, 3, Article 1293. 
+
 
 
 
