@@ -1,4 +1,4 @@
-Question: How have global wheat yields evolved across countries since 1961, and can countries be grouped into clusters with similar yield dynamics?
+**Question**: How have global wheat yields evolved across countries since 1961, and can countries be grouped into clusters with similar yield dynamics?
 
 Furthermore, does incorporating information from countries with similar yield patterns improve wheat-yield predictions compared with models based solely on a country's historical data?
 
@@ -96,6 +96,7 @@ Lobell, D. B., & Burke, M. B. (2010). On the use of statistical models to predic
 Ray, D. K., Gerber, J. S., MacDonald, G. K., & West, P. C. (2015). Climate variation explains a third of global crop yield variability. Nature Communications, 6, Article 5989. https://doi.org/10.1038/ncomms6989 
 
 Ray, D. K., Mueller, N. D., West, P. C., & Foley, J. A. (2012). Recent patterns of crop yield growth and stagnation. Nature Communications, 3, Article 1293. 
+
 
 
 
