@@ -6,6 +6,10 @@ How have global wheat yields evolved across countries since 1961, and can countr
 
 Furthermore, does incorporating information from countries with similar yield patterns improve wheat-yield predictions compared with models based solely on a country's historical data?
 
+**Scope Clarification**
+
+Major wheat-producing countries (China, India, Russia, USA, France) and major net-importing countries (Egypt, Algeria, Indonesia, Brazil, Japan) are cited as economically significant examples when interpreting global yield patterns. However, the empirical analysis is conducted across all countries with sufficient data.
+
 **Subquestions**
 
 How have wheat yields changed across countries from 1961 to 2023?
@@ -18,13 +22,15 @@ Can we use information from “similar” countries to improve yield predictions
 
 **Introduction and Literature Review**
 
-Global wheat yield data show both strong spatial and temporal patterns. Ray et al. (2012) analysed crop yields from 1961 to 2008 and found widespread stagnation despite overall growth. This revealed spatial heterogeneity that justifies cross-country correlation studies. Our group extended this to 2023 using the same FAOSTAT source, adding 15 years of data to our analysis. Baldos and Hertel (2014) showed that productivity growth in major producers shapes international trade and food security for net importers, directly motivating our question: do yields in top producers (China, India, Russia, USA, France) correlate with yields in major importers (Egypt, Algeria, Indonesia, Brazil, Japan)?  
+Global wheat yield data show both strong spatial and temporal patterns. Ray et al. (2012) analysed crop yields from 1961 to 2008 and found widespread stagnation despite overall growth. This revealed spatial heterogeneity that justifies cross-country correlation studies. Our group extended this to 2023 using the same FAOSTAT source, adding 15 years of data to our analysis. 
+
+Baldos and Hertel (2014) showed that productivity growth in major producers shapes international trade and food security for net importers, directly motivating our interest in whether global yield dynamics and shared structural factors can generate correlated yield patterns across economically significant producers and importers.
 
 Conforti (2004) demonstrated that international process changes can influence and be transmitted to domestic markets. Whilst Evenson and Gollin (2003) showed that agricultural technologies diffused globally through research networks. Moreover, these studies suggest that correlations, if present, could reflect either market price effects or patterns of technology transfer. 
 
 Lobell and Burke (2010) endorse regression models for yield prediction but warn of omitted-variable bias and non-stationarity. Our data suggest that this may be influenced by geopolitics, climate change, and international relations. We filtered the dataset to include only 164 countries with data completeness of 80% or higher to exclude outliers, as this was not the focus of the data. Ray et al. (2015) found that climate explains one-third of global yield variability. Since our dataset lacks climate controls, we acknowledge this as a key limitation when interpreting correlations.  
 
-In our research, we apply correlation and regression analysis to 1961-1923 wheat yields to test producer-importer relationships, whilst also recognising that observed patterns may reflect global trends rather than direct influence.
+In our research, we apply correlation and regression analyses to wheat-yield data from 1961 to 2023 to examine global yield dynamics and assess whether incorporating information from countries with similar yield patterns improves predictive performance, while recognising that observed correlations may reflect shared global trends rather than direct causal influence.
 
 **Data Cleaning**
 
@@ -46,7 +52,7 @@ We also looked at the distribution of wheat yields over the time period, finding
 
 We then computed the volatility for each country by measuring the degree of variation over the time period as a proxy. 
 
-Initially, those with high volatility were first-world, economically developed countries. Still, when proportionalising this to countries' yields, those with the highest volatility were typically associated with political instability and/or rapid economic change, whilst those with the lowest volatility were countries with consistently low yields and/or political stability.
+Initially, those with high volatility were high-income countries, economically developed countries. Still, when proportionalising this to countries' yields, those with the highest volatility were typically associated with political instability and/or rapid economic change, whilst those with the lowest volatility were countries with consistently low yields and/or political stability.
 
 _Can we group countries into clusters with similar yield dynamics?_
 
@@ -79,7 +85,7 @@ When modelling the data, the data were reshaped to include columns for 'Area' (c
 
 **Conclusion and Limitations**
 
-Global wheat yields have increased since 1961 (challenging the findings of Ret et al. (2012)), with the increase distributed between economically developed Western countries and rapidly developing Eastern ones. These are represented as Cluster 1 and Cluster 3, forming 4 clusters with distinct traits. When modelling yields, a simple model that incorporates historical data for both the country and the cluster can outperform a purely naive baseline.
+Global wheat yields have increased since 1961 (challenging the findings of Ret et al. (2012), with the increase distributed between economically developed Western countries and rapidly developing Eastern ones. These are represented as Cluster 1 and Cluster 3, forming 4 clusters with distinct traits. When modelling yields, a simple model that incorporates historical data for both the country and the cluster can outperform a purely naive baseline.
 
 Clusters of countries with similar yield dynamics do exist, and can be used to improve yield predictions. However, to do this more accurately, additional factors must be considered.
 
@@ -100,6 +106,7 @@ Lobell, D. B., & Burke, M. B. (2010). On the use of statistical models to predic
 Ray, D. K., Gerber, J. S., MacDonald, G. K., & West, P. C. (2015). Climate variation explains a third of global crop yield variability. Nature Communications, 6, Article 5989. https://doi.org/10.1038/ncomms6989 
 
 Ray, D. K., Mueller, N. D., West, P. C., & Foley, J. A. (2012). Recent patterns of crop yield growth and stagnation. Nature Communications, 3, Article 1293. 
+
 
 
 
