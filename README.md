@@ -49,6 +49,7 @@ Can we group countries into clusters with similar yield dynamics?
 We then examined how the yields of different countries correlated. We found a high degree of correlation across the board, with some outliers exhibiting notably negative correlations relative to the rest of the dataset. To do this, we determined the average yield of each country across the whole time period, the trend of the country over time, and the volatility, as mentioned earlier. This was followed by standardising these features and using k-means clustering amongst different groups of countries.
 
 This led to four different clusters forming. These are as follows-
+
 Cluster 0:
 
 Moderate wheat yields but experience noticeable year-to-year variability. Long-term improvement is positive but modest, suggesting slow technological adoption or inconsistent environmental conditions. May face climate instability, variable rainfall, or dependence on fluctuating input availability.
@@ -94,6 +95,7 @@ Lobell, D. B., & Burke, M. B. (2010). On the use of statistical models to predic
 Ray, D. K., Gerber, J. S., MacDonald, G. K., & West, P. C. (2015). Climate variation explains a third of global crop yield variability. Nature Communications, 6, Article 5989. https://doi.org/10.1038/ncomms6989 
 
 Ray, D. K., Mueller, N. D., West, P. C., & Foley, J. A. (2012). Recent patterns of crop yield growth and stagnation. Nature Communications, 3, Article 1293. 
+
 
 
 
