@@ -37,4 +37,17 @@ Consistently low yields but also relatively stable production. Long-term improve
 Cluster 3:
 Very high yields, maintain stable performance relative to their mean (lowest CV), and show strong positive long-term trends.
 Global agricultural leaders, likely including countries with: Advanced crop breeding, advanced farming techonlogy, controlled irrigation and consistent and stable agricultural policy
-WILL FINISH  TMMR
+
+Given a country’s past yields and the yields of “similar” countries, can we predict that country’s yields better than simple baselines?
+
+To do this, we compared several models. The first of which was the 'naive baseline' in which we assumed the yield was the same as the year before, 'own history linear regression', in which we predicyed yields based upon the countries past yields, and 'cluster augmented regression' in which we predicted a yield using the history of both the country and the fformentioned cluster it is a part of.
+We first visualised the trajectory of each cluster. Cluster 0 increased at a steady rate throughout the full time period, cluster 1 increased more rapidly towards the latter half of the time period, cluster 2 was the most stagnant throughout the time perriod, whist cluster 3 increased more rapidly at the start of the time period, and in a more steady manner towards the end. 
+So, when modelling this data, the data was reshaped, with colums detailing the 'Area' (country), 'Yield', 'Year' and 'Cluster'. We then tested this model on Mainland China, finding that the naive model tends to lag and fails to capture longer-term trends. The own-history regression improves performance by capturing a smooth trend over time and the cluster-augmented model further reduces prediction error, especially in years where the country’s yields move in line with its cluster peers. This suggests that using information from similar countries can modestly improve yield forecasts over using a country’s own history alone
+
+Conclusion and Limitations
+
+Global wheat yields have increased since 1961, with the distribution of this increase being spread between economically developed western countries and rapidly developing eastern ones. These are represented as Cluster 1 and Cluster 3, as part of the formation of 4 clusters with distinct traits. When modelling yields, a simple model involving the past data of both the country and the cluster can improve on purely using a naive baseline.
+There are limitations to these findings. These include the use of a linear interpolation to fill in missing values. Whlst an effective methodology, a more advanced methodology may have captured non-linear trends better. The use of k-means clustering is dependent on the pre-determined choices of the number of clusters and the traits they are defined by. Usage of this may mean that key insights are not fully revealed. A further limitation is that other factors require more consideration, including variation in weather, prices and policy.
+This does offer a basis for further research, incorporating data such as changing climate conditions, and inport/export data into the picture. More sophisticated methodologies may have also been prudent, such as dynamic time warping to better represent different trends across countries, and hierarchical clustering, which could have been used to more accurately group different datapoints.
+
+(needs references)
