@@ -51,7 +51,6 @@ We then examined how the yields of different countries correlated. We found a hi
 This led to four different clusters forming. These are as follows-
 
 Cluster 0:
-
 Moderate wheat yields but experience noticeable year-to-year variability. Long-term improvement is positive but modest, suggesting slow technological adoption or inconsistent environmental conditions. May face climate instability, variable rainfall, or dependence on fluctuating input availability.
 
 Cluster 1:
@@ -95,6 +94,7 @@ Lobell, D. B., & Burke, M. B. (2010). On the use of statistical models to predic
 Ray, D. K., Gerber, J. S., MacDonald, G. K., & West, P. C. (2015). Climate variation explains a third of global crop yield variability. Nature Communications, 6, Article 5989. https://doi.org/10.1038/ncomms6989 
 
 Ray, D. K., Mueller, N. D., West, P. C., & Foley, J. A. (2012). Recent patterns of crop yield growth and stagnation. Nature Communications, 3, Article 1293. 
+
 
 
 
