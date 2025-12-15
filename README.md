@@ -1,10 +1,12 @@
 Authors - Digby Pratt, Ella Cockman, Liam O'Brien, Mason Murray
 
-Question: Do wheat yield trends in major producing countries (China, India, Russia, USA, France) predict yields in net-importing countries (Egypt, Algeria, Indonesia, Brazil, Japan)?
+Question: Do wheat yield trends in major producing countries (e.g China, India, Russia, USA, France) predict yields in net-importing countries (e.g Egypt, Algeria, Indonesia, Brazil, Japan)?
 
 Subquestions
 
 How have wheat yields changed across countries from 1961 to 2023?
+
+Which countries have the highest yields and the fastest improvements? 
 
 Can we group countries into clusters with similar yield dynamics?
 
@@ -20,19 +22,17 @@ Lobell and Burke (2010) endorse regression models for yield prediction but warn 
 
 In our research, we apply correlation and regression analysis to 1961-1923 wheat yields to test producer-importer relationships, whilst also recognising that observed patterns may reflect global trends rather than direct influence.
 
-Methodology
-
 Data Cleaning
 
 We first filtered the dataset to remove any unnecessary data. This included any rows that contained crops that were not wheat, any rows that contained details that were not the yield, and columns that repeated information. We also filtered the dataset to exclude locations with less than 80% of the relevant wheat-yield data. We chose this figure because wheat yields are relatively smooth, which made estimating the remaining 20% feasible. If a country had less than 80% of data available, it was not viable to keep it in the study. Many countries had missing values, so it was not feasible to remove any that lacked complete data.
 
-To do these estimations, we used 'linear interpolation' - a way to estimate a missing value that exists between two known values. This methodology is suitable here because we can reasonably assume that year-to-year changes in wheat yields are linear, particularly when we have at least 80% of the data for each country/region. Lobell & Burke (2010) acknowledge the viability and common use of methodologies such as this, but also note limitations, characterising statistical models as a 'useful imperfect tool'. A limitation is that the missing values may have been due to outlier events, such as sudden changes in climate, political, or economic conditions.
+To do these estimations, we used 'linear interpolation' - a way to estimate a missing value that exists between two known values. This methodology is suitable here because we can reasonably assume that year-to-year changes in wheat yields are linear, particularly when we have at least 80% of the data for each country/region. Lobell & Burke (2010) acknowledge the viability and common use of methodologies such as this, but also note limitations, characterising statistical models as a 'useful imperfect tool'. A limitation is that the missing values may have been due to outlier events, such as sudden changes in climate, political, or economic conditions. This methodology is common practice in agricultural datasets (Rey et al, 2012).
 
 However, we acknowledge that the dataset contains many outliers, and no statistical model can account for them. Therefore, we are confident that this methodology is appropriate for this context. Interestingly, the most affected countries here do not appear to be randomly distributed, with countries such as Botswana, Qatar, and Sudan being politically unstable and relatively small.
 
 Statistical Analysis
 
-How have wheat yields changed across countries from 1961 to 2023?
+How have wheat yields changed across countries from 1961 to 2023 and which countries have the highest yields and the fastest improvements? 
 
 Initial statistical analysis found that global yields had increased year-on-year across all continents. Europe consistently had the highest yields by a significant margin, followed by Asia; the remaining continents fluctuated over the defined period but generally had similar yields. This was further demonstrated by calculating mean yields per country over the period, with the top 6 countries by yield per hectare from Europe and the bottom 10 from lower-income countries, primarily in Africa and South America.
 
@@ -94,6 +94,7 @@ Lobell, D. B., & Burke, M. B. (2010). On the use of statistical models to predic
 Ray, D. K., Gerber, J. S., MacDonald, G. K., & West, P. C. (2015). Climate variation explains a third of global crop yield variability. Nature Communications, 6, Article 5989. https://doi.org/10.1038/ncomms6989 
 
 Ray, D. K., Mueller, N. D., West, P. C., & Foley, J. A. (2012). Recent patterns of crop yield growth and stagnation. Nature Communications, 3, Article 1293. 
+
 
 
 
