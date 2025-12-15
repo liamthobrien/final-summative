@@ -1,6 +1,6 @@
 Authors - Digby Pratt, Ella Cockman, Liam O'Brien, Mason Murray
 
-Question: Do wheat yield trends in major producing countries (China, India, Russia, USA, France) predict yields in net-importing countries (Egypt, Algeria, Indonesia, Brazil Japan) and do these correlations reflect actual trade networks? 
+Question: Do wheat yield trends in major producing countries (China, India, Russia, USA, France) predict yields in net-importing countries (Egypt, Algeria, Indonesia, Brazil Japan)?
 
 Subquestions
 
@@ -74,5 +74,6 @@ Lobell, D. B., & Burke, M. B. (2010). On the use of statistical models to predic
 Ray, D. K., Gerber, J. S., MacDonald, G. K., & West, P. C. (2015). Climate variation explains a third of global crop yield variability. Nature Communications, 6, Article 5989. https://doi.org/10.1038/ncomms6989 
 
 Ray, D. K., Mueller, N. D., West, P. C., & Foley, J. A. (2012). Recent patterns of crop yield growth and stagnation. Nature Communications, 3, Article 1293. 
+
 
 
